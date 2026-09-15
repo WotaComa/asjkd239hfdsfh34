@@ -101,7 +101,7 @@ BillingCalculator
 context = new PriceContext(basePrice, customer, subscription, coupon, ...);
 
 foreach($rules => $rule) {
-    context = $tule$.apply(context);
+    context = $rule.apply(context);
 }
 
 return context.result();
