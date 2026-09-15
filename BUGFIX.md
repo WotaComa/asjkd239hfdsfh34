@@ -101,10 +101,10 @@ BillingCalculator
 context = new PriceContext(basePrice, customer, subscription, coupon, ...);
 
 foreach($rules => $rule) {
-    context = $rule.apply(context);
+    context = $rule->apply(context);
 }
 
-return context.result();
+return context->result();
 ```
 
 Для денежных операций лучше разделить правила по типам и явно задать порядок их выполнения. Например:
